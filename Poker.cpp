@@ -386,7 +386,7 @@ void Pokazanie() {
     }  
 }
 void Sprawdzenie() {
-    string nagrody[10] = { "WYSOKA KARTA","PARA","DWIE PARY","TRÓJKA","STRIT","KOLOR","FULL","KARETA","POKER","POKER KRÓLEWSKI" };
+    string nagrody[10] = { "WYSOKA KARTA","PARA","DWIE PARY","TRÃ“JKA","STRIT","KOLOR","FULL","KARETA","POKER","POKER KRÃ“LEWSKI" };
     int wygrana[7];
     for (int p = 0; p < Wprowadzenie.LiczbaGraczy+Wprowadzenie.LiczbaKomputerow; p++) {
         if (Kolejka[p].PASS == false) {           
@@ -415,7 +415,7 @@ void Sprawdzenie() {
                         for (int l = 0; l < 7; l++) {
                             for (int m = 0; m < 7; m++) {
                                 if (j !=i && j!=k && j!=l && j!=m && i!=k && i!=l && i!=m && k!=l && k!=m && l!=m ) {
-                                    //POKER KRÓLEWSKI
+                                    //POKER KRÃ“LEWSKI
                                     if (Ogolne.KartyWTalii[wygrana[i]][0] == 'A' && Ogolne.KartyWTalii[wygrana[j]][0] == 'K' && Ogolne.KartyWTalii[wygrana[k]][0] == 'D' && Ogolne.KartyWTalii[wygrana[l]][0] == 'J' && Ogolne.KartyWTalii[wygrana[m]][0]=='1' && Kolejka[p].nagroda < 9) {
                                         if (Ogolne.KartyWTalii[wygrana[i]][1] == Ogolne.KartyWTalii[wygrana[j]][1] == Ogolne.KartyWTalii[wygrana[k]][1] == Ogolne.KartyWTalii[wygrana[l]][1] == Ogolne.KartyWTalii[wygrana[m]][1]) {
                                                 Kolejka[p].nagroda = 9;                                        
@@ -444,7 +444,7 @@ void Sprawdzenie() {
                                     else if (Ogolne.KartyWTalii[wygrana[i]][0] == Ogolne.KartyWTalii[wygrana[j] - 1][0] == Ogolne.KartyWTalii[wygrana[k] - 2][0] == Ogolne.KartyWTalii[wygrana[l] - 3][0] == Ogolne.KartyWTalii[wygrana[m] - 4][0] && Kolejka[p].nagroda < 4) {
                                         Kolejka[p].nagroda = 4;
                                     }
-                                    //TRÓJKA
+                                    //TRÃ“JKA
                                     else if (Ogolne.KartyWTalii[wygrana[i]][0] == Ogolne.KartyWTalii[wygrana[j]][0] == Ogolne.KartyWTalii[wygrana[k]][0] && Kolejka[p].nagroda < 3) {
                                         Kolejka[p].nagroda = 3;
                                     }
